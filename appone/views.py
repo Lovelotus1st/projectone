@@ -31,7 +31,7 @@ def form_view(request):
         if form.is_valid():
             post = form.save(commit = False)
             post.save()
-            return redirect('/admin/', pk=post.pk)
+            return redirect('/admin/appone/signup/', pk=post.pk)
     else:
         form = forms.FormName()
 
