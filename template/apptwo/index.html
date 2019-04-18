@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample template form</title>
+    <link rel="stylesheet" href="{% static "css/styles.css" %} ">
+</head>
+<body>
+<h1>Hello Appp 2 </h1>
+<p>{{ any_var }}</p>
+
+<img src="{% static "images/flower.svg"%}" alt="Flower">
+<button type="button"><a href="appone/form">Navigate to form</a></button>
+
+<!--{{ form }}
+
+<form method="POST">
+  First name:<br>
+  <input type="text" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+-->
+</body>
+</html>

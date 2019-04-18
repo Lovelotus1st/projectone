@@ -12,7 +12,7 @@ def index(request):
 
 def template(request):
     d_var = {'any_var':"I'm value of any_variables"}
-    return render(request,'index.html',context = d_var)
+    return render(request,'appone/index.html',context = d_var)
 
 def detail(request, question_id):
     return HttpResponse('You are looking at question %s.' % question_id)
@@ -35,5 +35,5 @@ def form_view(request):
     else:
         form = forms.FormName()
 
-    return render(request,'form.html',{'form1':form})
+    return render(request,'appone/form.html',{'form1':form})
 
