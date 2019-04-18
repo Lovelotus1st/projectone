@@ -17,10 +17,14 @@ def form_view(request):
     if request.method =="POST":
         form = forms.FormName(request.POST)
         if form.is_valid():
-
-
-            post = form.save(commit = False)
-            post.save()
+            a = form.cleaned_data["password"]
+            b = form.cleaned_data["v_password"]
+            if a == b:
+                post = form.save(commit=False)
+                post.save()
+            else:
+                form = forms.FormName()
+                return HttpResponse("Password not matched, try again")
             return redirect('/admin/apptwo/login/', pk=post.pk)
     else:
         form = forms.FormName()
